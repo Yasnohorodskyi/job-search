@@ -4,11 +4,11 @@
 
 <script>
 export default {
-  name: "JobView",
+  name: 'JobView',
   computed: {
     currentJobId() {
       return this.$route.params.id;
-    },
-  },
+    }
+  }
 };
 </script>

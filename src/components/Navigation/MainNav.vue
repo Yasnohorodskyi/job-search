@@ -1,7 +1,7 @@
 <script>
-import ActionButton from '@/components/Shared/ActionButton.vue'
-import ProfileImage from '@/components/Navigation/ProfileImage.vue'
-import TheSubnav from '@/components/Navigation/TheSubnav.vue'
+import ActionButton from '@/components/Shared/ActionButton.vue';
+import ProfileImage from '@/components/Navigation/ProfileImage.vue';
+import TheSubnav from '@/components/Navigation/TheSubnav.vue';
 
 export default {
   name: 'MainNav',
@@ -21,35 +21,27 @@ export default {
         { text: 'Jobs', url: '/jobs/results' }
       ],
       isLoggedIn: false
-    }
+    };
   },
   computed: {
     headerHeightClass() {
       return {
         'h-16': !this.isLoggedIn,
         'h-32': this.isLoggedIn
-      }
+      };
     }
   },
   methods: {
     loginUser() {
-      this.isLoggedIn = true
+      this.isLoggedIn = true;
     }
   }
-}
+};
 </script>
 
 <template>
-  <header
-    :class="[
-      'w-full',
-      'text-sm',
-      headerHeightClass
-    ]"
-  >
-    <div
-      class="fixed left-0 top-0 h-16 w-full bg-white"
-    >
+  <header :class="['w-full', 'text-sm', headerHeightClass]">
+    <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"
       >
@@ -75,15 +67,9 @@ export default {
           </ul>
         </nav>
 
-        <div
-          class="ml-auto flex h-full items-center"
-        >
+        <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isLoggedIn" />
-          <action-button
-            v-else
-            text="Sign in"
-            @click="loginUser"
-          />
+          <action-button v-else text="Sign in" @click="loginUser" />
         </div>
       </div>
 

@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: "JobFiltersSidebar",
+  name: 'JobFiltersSidebar'
 };
 </script>

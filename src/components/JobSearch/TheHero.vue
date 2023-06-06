@@ -1,6 +1,6 @@
 <script>
-import TheHeadline from '@/components/JobSearch/TheHeadline.vue'
-import JobSearchForm from '@/components/JobSearch/JobSearchForm.vue'
+import TheHeadline from '@/components/JobSearch/TheHeadline.vue';
+import JobSearchForm from '@/components/JobSearch/JobSearchForm.vue';
 
 export default {
   name: 'TheHero',
@@ -8,7 +8,7 @@ export default {
     TheHeadline,
     JobSearchForm
   }
-}
+};
 </script>
 
 <template>

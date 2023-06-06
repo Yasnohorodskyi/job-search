@@ -1,6 +1,6 @@
 <script>
-import ActionButton from '@/components/Shared/ActionButton.vue'
-import TextInput from '@/components/Shared/TextInput.vue'
+import ActionButton from '@/components/Shared/ActionButton.vue';
+import TextInput from '@/components/Shared/TextInput.vue';
 
 export default {
   name: 'JobSearchForm',
@@ -9,7 +9,7 @@ export default {
     return {
       role: '',
       location: ''
-    }
+    };
   },
   methods: {
     searchForJobs() {
@@ -19,10 +19,10 @@ export default {
           role: this.role,
           location: this.location
         }
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <template>
@@ -30,27 +30,12 @@ export default {
     class="flex h-12 w-full items-center rounded-3xl border border-solid border-brand-gray-3"
     @submit.prevent="searchForJobs"
   >
-    <font-awesome-icon
-      :icon="['fas', 'search']"
-      class="ml-4 mr-3"
-    />
+    <font-awesome-icon :icon="['fas', 'search']" class="ml-4 mr-3" />
 
-    <div
-      class="flex h-full flex-1 flex-nowrap text-base font-light"
-    >
-      <div
-        class="relative flex h-full flex-1 items-center pr-3"
-      >
-        <label
-          for="role"
-          class="absolute -top-10 left-0"
-          >Role</label
-        >
-        <text-input
-          id="role"
-          v-model="role"
-          placeholder="Software engineer"
-        />
+    <div class="flex h-full flex-1 flex-nowrap text-base font-light">
+      <div class="relative flex h-full flex-1 items-center pr-3">
+        <label for="role" class="absolute -top-10 left-0">Role</label>
+        <text-input id="role" v-model="role" placeholder="Software engineer" />
       </div>
 
       <span
@@ -59,14 +44,8 @@ export default {
         in
       </span>
 
-      <div
-        class="relative flex h-full flex-1 items-center pl-3"
-      >
-        <label
-          for="location"
-          class="absolute -top-10 left-0"
-          >Where?</label
-        >
+      <div class="relative flex h-full flex-1 items-center pl-3">
+        <label for="location" class="absolute -top-10 left-0">Where?</label>
         <text-input
           id="location"
           v-model="location"
@@ -75,10 +54,6 @@ export default {
       </div>
     </div>
 
-    <action-button
-      text="Search"
-      type="secondary"
-      class="rounded-r-3xl"
-    />
+    <action-button text="Search" type="secondary" class="rounded-r-3xl" />
   </form>
 </template>

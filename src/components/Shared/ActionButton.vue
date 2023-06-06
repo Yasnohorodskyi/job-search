@@ -11,7 +11,7 @@ export default {
       required: false,
       default: 'primary',
       validator(value) {
-        return ['primary', 'secondary'].includes(value)
+        return ['primary', 'secondary'].includes(value);
       }
     }
   },
@@ -19,10 +19,10 @@ export default {
     buttonClass() {
       return {
         [this.type]: true
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <template>

@@ -3,10 +3,10 @@ export default {
   name: 'TheSubnav',
   computed: {
     onJobResultsPage() {
-      return this.$route.name === 'JobResults'
+      return this.$route.name === 'JobResults';
     }
   }
-}
+};
 </script>
 
 <template>

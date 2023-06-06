@@ -1,5 +1,5 @@
 <script>
-import nextElementInList from '@/utils/nextElementInList'
+import nextElementInList from '@/utils/nextElementInList';
 
 export default {
   name: 'TheHeadline',
@@ -7,30 +7,30 @@ export default {
     return {
       action: 'Build',
       interval: null
-    }
+    };
   },
   computed: {
     actionClasses() {
       return {
         [this.action.toLowerCase()]: true
-      }
+      };
     }
   },
   created() {
-    this.changeTitle()
+    this.changeTitle();
   },
   beforeUnmount() {
-    clearInterval(this.interval)
+    clearInterval(this.interval);
   },
   methods: {
     changeTitle() {
       this.interval = setInterval(() => {
-        const actions = ['Build', 'Create', 'Design', 'Code']
-        this.action = nextElementInList(actions, this.action)
-      }, 3000)
+        const actions = ['Build', 'Create', 'Design', 'Code'];
+        this.action = nextElementInList(actions, this.action);
+      }, 3000);
     }
   }
-}
+};
 </script>
 
 <template>

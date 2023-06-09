@@ -1,3 +1,3 @@
 # Job-Search SPA
 
-Developed on: Vue3, Vite, Tailwind, Vitest.
+Developed on: Vue3, Vite, Tailwind, Vue Router, Pinia, Vitest.

@@ -1,3 +1,20 @@
+<script>
+export default {
+  name: 'JobListing',
+  props: {
+    job: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    jobPageLink() {
+      return `/jobs/results/${this.job.id}`;
+    }
+  }
+};
+</script>
+
 <template>
   <li class="mb-7">
     <router-link
@@ -52,20 +69,3 @@
     </router-link>
   </li>
 </template>
-
-<script>
-export default {
-  name: 'JobListing',
-  props: {
-    job: {
-      type: Object,
-      required: true
-    }
-  },
-  computed: {
-    jobPageLink() {
-      return `/jobs/results/${this.job.id}`;
-    }
-  }
-};
-</script>

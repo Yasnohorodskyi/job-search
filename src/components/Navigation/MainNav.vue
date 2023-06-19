@@ -17,12 +17,12 @@ const menuItems = ref([
 ]);
 
 const useStore = useUserStore();
-const loginUser = useStore.loginUser;
-const isLoggedIn = computed(() => useStore.isLoggedIn);
+const loginUser = useStore.LOGIN_USER;
+const LOGIN_USER = computed(() => useStore.isLoggedIn);
 const headerHeightClass = computed(() => {
   return {
-    'h-16': !isLoggedIn.value,
-    'h-32': isLoggedIn.value
+    'h-16': !LOGIN_USER.value,
+    'h-32': LOGIN_USER.value
   };
 });
 </script>
@@ -56,12 +56,12 @@ const headerHeightClass = computed(() => {
         </nav>
 
         <div class="ml-auto flex h-full items-center">
-          <profile-image v-if="isLoggedIn" />
+          <profile-image v-if="LOGIN_USER" />
           <action-button v-else text="Sign in" @click="loginUser" />
         </div>
       </div>
 
-      <the-subnav v-if="isLoggedIn" />
+      <the-subnav v-if="LOGIN_USER" />
     </div>
   </header>
 </template>
